@@ -10,14 +10,13 @@
                     Dashboard
                 </a>
                 
-                @if(in_array(auth()->user()->role, ['merchant', 'admin']))
+                @if(auth()->user()->role == "pharmacist" | auth()->user()->role == "admin" )
                     <!-- Other menu items for merchant and admin -->
                     <a class="nav-link {{ Request::is('pos*') ? 'active' : '' }}" href="{{ route('pos.index') }}">
                         <div class="nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
                         POS
                     </a>
                     <!-- Additional menu items for merchant and admin -->
-                @endif
 
                 <!-- Sidenav Heading (Orders)-->
                 <div class="sidenav-menu-heading">Orders</div>
@@ -50,6 +49,7 @@
                 </a>
             </div>
         </div>
+        @endif
 
         <!-- Sidenav Footer-->
         <div class="sidenav-footer">

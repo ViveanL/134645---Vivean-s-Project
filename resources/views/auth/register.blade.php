@@ -48,14 +48,12 @@
                         </div>
                         <!-- Form Group (role) -->
                         <div class="mb-3">
-                            <label class="text-gray-600 small" for="role">Role</label>
-                            <input class="form-control form-control-solid @error('role') is-invalid @enderror" type="text" id="role" name="role" placeholder="" value="{{ old('role') }}" autocomplete="off"/>
-                            @error('username')
-                            <div class="invalid-feedback">
-                                <i class="bx bx-radio-circle"></i>
-                                {{ $message }}
-                            </div>
-                            @enderror
+                    <label for="role" class="text-gray-600 small">Role</label><br>
+                    <select name="role" class="border border-gray-200 rounded p-2 w-full">
+                        <option value="user">User</option>
+                        <option value="merchant">Pharmacist</option>
+                        <option value="admin">Admin</option>
+                    </select>
                         </div>
                         <!-- Form Group (email address) -->
                         <div class="mb-3">
