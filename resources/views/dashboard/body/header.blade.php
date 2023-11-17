@@ -26,6 +26,7 @@
                     <img class="dropdown-user-img" src="{{ auth()->user()->photo ? asset('storage/profile/'.auth()->user()->photo) : asset('assets/img/illustrations/profiles/profile-1.png') }}" />
                     <div class="dropdown-user-details">
                         <div class="dropdown-user-details-name">{{ auth()->user()->name }}</div>
+                        <div class="dropdown-user-details-name">{{ auth()->user()->role }}</div>
                         <div class="dropdown-user-details-email">{{ auth()->user()->email }}</a></div>
                     </div>
                 </h6>

@@ -11,7 +11,7 @@
                     <div class="small text-muted mb-2">Sign in using...</div>
                     <!-- BEGIN: Social Registration Links -->
                     <a class="btn btn-icon btn-facebook mx-1" href="#"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a>
-                    <a class="btn btn-icon btn-github mx-1" href="#"><i class="fab fa-github fa-fw fa-sm"></i></a>
+                    <a class="btn btn-icon btn-github mx-1" href="https://github.com/ViveanL/Vivean134645"><i class="fab fa-github fa-fw fa-sm"></i></a>
                     <a class="btn btn-icon btn-google mx-1" href="#"><i class="fab fa-google fa-fw fa-sm"></i></a>
                     <a class="btn btn-icon btn-twitter mx-1" href="#"><i class="fab fa-twitter fa-fw fa-sm text-white"></i></a>
                     <!-- END: Social Registration Links -->
