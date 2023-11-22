@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('product_name');
             $table->string('category_id');
             $table->string('unit_id');
+            $table->string('expiry_date');
             $table->string('product_code')->nullable();
             $table->integer('stock');
             $table->integer('buying_price')->nullable();
