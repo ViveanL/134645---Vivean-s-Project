@@ -58,6 +58,9 @@ Route::post('/verify-login-otp', [UserController::class, 'verifyLoginOtp']);
 Route::get('/resend-otp', [UserController::class, 'resendOtp'])->name('resend-otp'); 
 Route::get('/resend-registration-otp', [UserController::class, 'resendRegOtp'])->name('resendRegOtp');
 
+//Logging users out
+Route::post('/logout', [UserController::class, 'logout']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
