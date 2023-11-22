@@ -85,6 +85,11 @@
                             <label class="small mb-1">Product unit</label>
                             <div class="form-control form-control-solid">{{ $product->unit->name  }}</div>
                         </div>
+                     <!-- Form Group (type of product expiry date) -->
+                     <div class="col-md-6">
+                            <label class="small mb-1">Product expiry date</label>
+                            <div class="form-control form-control-solid">{{ $product->expiry_date  }}</div>
+                        </div>
                     </div>
                     <!-- Form Row -->
                     <div class="row gx-3 mb-3">

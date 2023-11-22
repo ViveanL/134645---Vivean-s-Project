@@ -78,6 +78,7 @@
                                     <th scope="col">@sortablelink('category.name', 'category')</th>
                                     <th scope="col">@sortablelink('stock')</th>
                                     <th scope="col">@sortablelink('unit.name', 'unit')</th>
+                                    <th scope="col">@sortablelink('expiry_date, 'Expiry Date')</th>
                                     <th scope="col">@sortablelink('selling_price', 'Price')</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -95,6 +96,7 @@
                                     <td>{{ $product->category->name }}</td>
                                     <td>{{ $product->stock }}</td>
                                     <td>{{ $product->unit->name }}</td>
+                                    <td>{{ $product->expiry_date }}</td>
                                     <td>{{ $product->selling_price }}</td>
                                     <td>
                                         <div class="d-flex">

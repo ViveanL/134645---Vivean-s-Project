@@ -81,7 +81,7 @@
                                 </div>
                                 @enderror
                             </div>
-                            <!-- Form Group (type of product expiry date) -->
+                            <!-- Form Group (type of product unit) -->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="unit_id">Unit <span class="text-danger">*</span></label>
                                 <select class="form-select form-control-solid @error('nit_id') is-invalid @enderror" id="unit_id" name="unit_id">
@@ -96,13 +96,13 @@
                                 </div>
                                 @enderror
                             </div>
-                            <!-- Form Group (type of product unit) -->
+                            <!-- Form Group (type of product expiry date) -->
                             <div class="col-md-6">
-                                <label class="small mb-1" for="unit_id">Expiry Date <span class="text-danger">*</span></label>
-                                <select class="form-select form-control-solid @error('expiry_date') is-invalid @enderror" id="unit_id" name="expiry_date">
-                                    <option selected="" disabled="">Select a unit:</option>
+                                <label class="small mb-1" for="expiry_date">Expiry Date <span class="text-danger">*</span></label>
+                                <select class="form-select form-control-solid @error('expiry_date') is-invalid @enderror" id="expiry_date" name="expiry_date">
+                                    <option selected="" disabled="">Select an expiring date:</option>
                                     @foreach ($dates as $date)
-                                    <option value="{{ $expiry_date }}" @if(old('expiry_date') == $unit->id) selected="selected" @endif>{{ $expiry->name }}</option>
+                                    <option value="{{ $expiry_date }}" @if(old('expiry_date') == $expiry_date) selected="selected" @endif>{{ $expiry->name }}</option>
                                     @endforeach
                                 </select>
                                 @error('expiry_date')
