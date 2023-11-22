@@ -188,9 +188,10 @@ class ProductController extends Controller
                     'unit_id' => $sheet->getCell( 'C' . $row )->getValue(),
                     'product_code' => $sheet->getCell( 'D' . $row )->getValue(),
                     'stock' => $sheet->getCell( 'E' . $row )->getValue(),
-                    'buying_price' => $sheet->getCell( 'F' . $row )->getValue(),
-                    'selling_price' =>$sheet->getCell( 'G' . $row )->getValue(),
-                    'product_image' =>$sheet->getCell( 'H' . $row )->getValue(),
+                    'expiry_date' => $sheet->getCell( 'F' . $row )->getValue(),
+                    'buying_price' => $sheet->getCell( 'G' . $row )->getValue(),
+                    'selling_price' =>$sheet->getCell( 'H' . $row )->getValue(),
+                    'product_image' =>$sheet->getCell( 'I' . $row )->getValue(),
                 ];
                 $startcount++;
             }
@@ -221,6 +222,7 @@ class ProductController extends Controller
             'Unit Id',
             'Product Code',
             'Stock',
+            'Expiry Date',
             'Buying Price',
             'Selling Price',
             'Product Image',
@@ -234,6 +236,7 @@ class ProductController extends Controller
                 'Unit Id' => $product->unit_id,
                 'Product Code' => $product->product_code,
                 'Stock' => $product->stock,
+                'Expiry Date' => $product->expiry_date,
                 'Buying Price' =>$product->buying_price,
                 'Selling Price' =>$product->selling_price,
                 'Product Image' => $product->product_image,

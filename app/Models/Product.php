@@ -16,6 +16,7 @@ class Product extends Model
         'unit_id',
         'product_code',
         'stock',
+        'expiry_date',
         'buying_price',
         'selling_price',
         'product_image',
@@ -27,6 +28,7 @@ class Product extends Model
         'unit_id',
         'product_code',
         'stock',
+        'expiry_date',
         'buying_price',
         'selling_price',
     ];
