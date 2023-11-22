@@ -81,16 +81,31 @@
                                 </div>
                                 @enderror
                             </div>
-                            <!-- Form Group (type of product unit) -->
+                            <!-- Form Group (type of product expiry date) -->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="unit_id">Unit <span class="text-danger">*</span></label>
-                                <select class="form-select form-control-solid @error('unit_id') is-invalid @enderror" id="unit_id" name="unit_id">
+                                <select class="form-select form-control-solid @error('nit_id') is-invalid @enderror" id="unit_id" name="unit_id">
                                     <option selected="" disabled="">Select a unit:</option>
-                                    @foreach ($units as $unit)
+                                    @foreach ($$units as $unit)
                                     <option value="{{ $unit->id }}" @if(old('unit_id') == $unit->id) selected="selected" @endif>{{ $unit->name }}</option>
                                     @endforeach
                                 </select>
                                 @error('unit_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <!-- Form Group (type of product unit) -->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="unit_id">Expiry Date <span class="text-danger">*</span></label>
+                                <select class="form-select form-control-solid @error('expiry_date') is-invalid @enderror" id="unit_id" name="expiry_date">
+                                    <option selected="" disabled="">Select a unit:</option>
+                                    @foreach ($dates as $date)
+                                    <option value="{{ $expiry_date }}" @if(old('expiry_date') == $unit->id) selected="selected" @endif>{{ $expiry->name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('expiry_date')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
