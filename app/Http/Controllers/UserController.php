@@ -308,7 +308,7 @@ class UserController extends Controller
     if ($user && Hash::check($formFields['password'], $user->password)) {
         // Generate OTP
         $otp = rand(100000, 999999);
-        $user->otp_code = $otp;
+        $user->otp_code = Hash::generate($fourDigitalCode);
         $user->otp_created_at = now();
         $user->save();
 
