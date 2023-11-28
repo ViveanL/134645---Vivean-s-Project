@@ -10,7 +10,7 @@
                     Dashboard
                 </a>
                 
-                @if(auth()->user()->role == "pharmacist" | auth()->user()->role == "admin" )
+                @if(auth()->user()->role == "merchant" | auth()->user()->role == "admin" )
                     <!-- Other menu items for merchant and admin -->
                     <a class="nav-link {{ Request::is('pos*') ? 'active' : '' }}" href="{{ route('pos.index') }}">
                         <div class="nav-link-icon"><i class="fa-solid fa-cart-shopping"></i></div>
@@ -103,13 +103,3 @@
     </nav>
 @endauth
 
-
-        <!-- Sidenav Footer-->
-        <div class="sidenav-footer">
-            <div class="sidenav-footer-content">
-                <div class="sidenav-footer-subtitle">Logged in as:</div>
-                <div class="sidenav-footer-title">{{ auth()->user()->name }}</div>
-            </div>
-        </div>
-    </nav>
-@endauth
